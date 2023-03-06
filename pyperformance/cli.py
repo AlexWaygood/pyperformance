@@ -222,6 +222,8 @@ def _benchmarks_from_options(options):
 
 
 def _select_benchmarks(raw, manifest):
+    print(f"{raw=}")
+    print(f"{manifest=}")
     from pyperformance import _benchmark_selections
 
     # Get the raw list of benchmarks.
@@ -246,6 +248,7 @@ def _select_benchmarks(raw, manifest):
             logging.warning(f"no benchmark named {bench!r}")
             continue
         selected.append(bench)
+    print(f"{selected=}")
     return selected
 
 
